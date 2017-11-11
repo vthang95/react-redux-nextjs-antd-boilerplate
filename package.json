@@ -1,0 +1,52 @@
+{
+  "name": "reactjs-nextjs-boilerplate",
+  "version": "1.0.0",
+  "description": "A simple react + next example app. A boilerplate for server side rendering with react and nextjs",
+  "main": "server.js",
+  "scripts": {
+    "build": "next build",
+    "build-scss": "node-sass static/sass/global.scss static/dist/global.css",
+    "build-scss:watch": "node-sass -w static/sass/ -o static/dist/",
+    "dev": "NODE_ENV=devolopment SESSION_SECRET=reactnextboilerplate nodemon --watch server.js & npm run build-scss:watch",
+    "start": "npm run build-deploy && NODE_ENV=production SESSION_SECRET=reactnextboilerplate node .dist/server.js",
+    "analyze": "cross-env ANALYZE=1 next build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^2.13.9",
+    "axios": "^0.17.0",
+    "compression": "^1.7.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.1",
+    "morgan": "^1.9.0",
+    "next": "3.2.2",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.6.2",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-plugin-wrap-in-js": "^1.1.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "glob": "^7.1.2",
+    "node-sass": "4.5.3",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-loader": "^2.0.8",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "styled-jsx-postcss": "^0.2.0",
+    "webpack-bundle-analyzer": "^2.9.1"
+  }
+}

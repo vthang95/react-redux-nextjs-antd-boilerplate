@@ -1,0 +1,13 @@
+@import 'static/sass/utilities.scss'
+
+body {
+  height: 100%;
+
+  .ant-layout {
+    height: 100vh !important;
+
+    .ant-content {
+      background-color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import 'static/sass/utilities.scss';
+
+.layout {
+  background-color: $color-white;
+
+  .ant-layout-header {
+    background-color: $flat-turquoise-5;
+
+    .ant-menu {
+      background-color: $flat-turquoise-5 !important;
+
+      border-bottom-color: $flat-turquoise-5 !important;
+    }
+  }
+}
