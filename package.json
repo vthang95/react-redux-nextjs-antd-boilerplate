@@ -1,7 +1,7 @@
 {
-  "name": "reactjs-nextjs-boilerplate",
+  "name": "react-next-antd-boilerplate",
   "version": "1.0.0",
-  "description": "A simple react + next example app. A boilerplate for server side rendering with react and nextjs",
+  "description": "A simple react + next example app. A boilerplate for server side rendering with React, Next.js and React UI library Ant Design",
   "main": "server.js",
   "scripts": {
     "build": "next build",
@@ -11,8 +11,26 @@
     "start": "npm run build-deploy && NODE_ENV=production SESSION_SECRET=reactnextboilerplate node .dist/server.js",
     "analyze": "cross-env ANALYZE=1 next build"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vthang95/react-next-antd-boilerplate.git"
+  },
+  "keywords": [
+     "[\"react\"",
+     "\"next\"",
+     "\"next.js\"",
+     "\"nextjs\"",
+     "\"ant",
+     "design\"",
+     "\"boilerplate\"",
+     "\"example\"]"
+   ],
+  "author": "vthang95",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vthang95/react-next-antd-boilerplate/issues"
+  },
+  "homepage": "https://github.com/vthang95/react-next-antd-boilerplate#readme",
   "dependencies": {
     "antd": "^2.13.9",
     "axios": "^0.17.0",
