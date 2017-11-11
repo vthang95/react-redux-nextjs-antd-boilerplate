@@ -7,7 +7,9 @@ const bigdaddy = OurChildComponent => {
   class HigherOrderComponent extends Component {
     static async getInitialProps(ctx) {
       // Do something in serverside here
-      return {}
+      const childProps = OurChildComponent.getInitialProps ? await OurChildComponent.getInitialProps(ctx) : {};
+
+      return { ...childProps }
     }
 
     render() {
