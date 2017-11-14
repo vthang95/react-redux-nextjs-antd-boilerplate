@@ -28,6 +28,7 @@ class Index extends React.Component {
             <div>
               <Button
                 type="danger"
+                style={{ marginTop: 20 }}
                 onClick={() => Notification.success('Yay!', 'You clicked!')}
               >
                 Click Me!

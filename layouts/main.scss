@@ -6,10 +6,45 @@
   .ant-layout-header {
     background-color: $flat-turquoise-5;
 
-    .ant-menu {
-      background-color: $flat-turquoise-5 !important;
-
-      border-bottom-color: $flat-turquoise-5 !important;
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: $color-white
     }
+
+    .account {
+      float: right;
+      color: $color-white;
+      font-size: 14px;
+      font-weight: 600;
+
+      span {
+        color: $flat-alizarin-7;
+      }
+    }
+
+    .account-login, .account-signup {
+      color: $color-white;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px;
+
+      &:hover {
+        color: $flat-alizarin-4;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
+.vertical-center-modal {
+  .login-form {
+    max-width: 350px;
+  }
+  .login-form-forgot {
+    float: right;
+  }
+  .login-form-button {
+    width: 100%;
   }
 }

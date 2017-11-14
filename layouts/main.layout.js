@@ -1,6 +1,9 @@
 import { Component } from 'react'
 import { Layout, Menu } from 'antd'
+import { connect } from 'react-redux'
 
+import LoginModal from 'components/LoginModal'
+import { authControlLoginModal } from 'actions'
 import style from './main.scss'
 
 class MainLayout extends Component {
@@ -8,10 +11,16 @@ class MainLayout extends Component {
     return (
       <Layout className="layout">
         <Layout.Header>
-          Logo
-          <div style={{ float: 'right' }}>
-            Avatar
-          </div>
+          <span className="logo">Next starter</span>
+          {
+            this.props.auth.identity
+              ? <div className="account">Signed in as <span>{this.props.auth.identity}</span></div>
+              : <div style={{ float: 'right' }}>
+                  <span className="account-login" onClick={() => this.props.authControlLoginModal(true)}>Login</span>
+                  <span className="account-signup">Signup</span>
+                  <LoginModal />
+                </div>
+          }
         </Layout.Header>
         <Layout.Content style={{ padding: '0 50px' }}>
           {this.props.children}
@@ -25,4 +34,10 @@ class MainLayout extends Component {
   }
 }
 
-export default MainLayout
+const mapStateToProps = state => {
+  return {
+    auth: state.auth
+  }
+}
+
+export default connect(mapStateToProps, { authControlLoginModal })(MainLayout)

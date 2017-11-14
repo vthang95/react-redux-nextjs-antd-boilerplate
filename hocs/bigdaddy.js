@@ -1,5 +1,7 @@
 import { Component } from 'react'
 import Head from 'next/head'
+import vi from 'antd/lib/locale-provider/en_US';
+import { LocaleProvider } from 'antd'
 
 import MainLayout from 'layouts/main.layout'
 
@@ -25,9 +27,11 @@ const bigdaddy = OurChildComponent => {
             <link href="/static/css/antd.min.2.13.9.css" rel="stylesheet" />
             <link href="/static/dist/global.css" rel="stylesheet" />
           </Head>
-          <MainLayout>
-            <OurChildComponent { ...this.props } />
-          </MainLayout>
+          <LocaleProvider locale={vi}>
+            <MainLayout>
+              <OurChildComponent { ...this.props } />
+            </MainLayout>
+          </LocaleProvider>
         </div>
       )
     }
