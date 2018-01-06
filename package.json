@@ -9,7 +9,9 @@
     "build-scss:watch": "node-sass -w static/sass/ -o static/dist/",
     "dev": "NODE_ENV=devolopment SESSION_SECRET=reactnextboilerplate nodemon --watch server.js & npm run build-scss:watch",
     "start": "npm run build-deploy && NODE_ENV=production SESSION_SECRET=reactnextboilerplate node .dist/server.js",
-    "analyze": "cross-env ANALYZE=1 next build"
+    "analyze": "cross-env ANALYZE=1 next build",
+    "heroku-postbuild": "rm -fr ./build & next build",
+    "deploy-heroku": "git push heroku master"
   },
   "repository": {
     "type": "git",
