@@ -1,0 +1,230 @@
+.is {
+  &-flex {
+    display: flex !important;
+
+    &-1 {
+      flex: 1;
+    }
+
+    &__space-between {
+      justify-content: space-between;
+    }
+
+    &__center {
+      justify-content: center;
+    }
+
+    &__start {
+      justify-content: flex-start;
+    }
+  }
+
+  &-vertical-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-100-height {
+    height: 100%;
+  }
+
+  &-fullwidth {
+    width: 100%;
+  }
+
+  &-fullheight {
+    height: 100%;
+  }
+
+  &-float-left {
+    float: left;
+  }
+
+  &-float-right {
+    float: right;
+  }
+
+  &-link {
+    &__dark {
+      a {
+        color: #fff;
+
+        &:hover {
+          color: $flat-greensea-2;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__light {
+      a {
+        color: $color-text;
+
+        &:hover {
+          color: $color-blue-9;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &-clickable {
+    cursor: pointer !important;
+
+    &__no-shadow:hover {
+      box-shadow: none !important;
+    }
+
+    &:hover {
+      box-shadow: 0 5px 10px #d7d7d7, 0 -5px 15px #d9d9d9;
+    }
+  }
+
+  &-padding {
+    &-25 {
+      padding: 25px;
+    }
+
+    &-20 {
+      padding: 20px;
+    }
+
+    &-15 {
+      padding: 15px;
+    }
+
+    &-10 {
+      padding: 10px;
+    }
+
+    &-5 {
+      padding: 5px;
+    }
+  }
+
+  &-margin {
+    &-25 {
+      margin: 25px;
+    }
+
+    &-20 {
+      margin: 20px;
+    }
+
+    &-15 {
+      margin: 15px;
+    }
+
+    &-10 {
+      margin: 10px;
+    }
+
+    &-5 {
+      margin: 5px;
+    }
+  }
+
+  &-text {
+    &-center {
+      text-align: center;
+    }
+
+    &-sm {
+      font-size: 14px;
+    }
+
+    &-md {
+      font-size: 18px;
+    }
+
+    &-lg {
+      font-size: 24px;
+    }
+
+    &-sg {
+      font-size: 28px;
+    }
+
+    &-bold {
+      font-weight: bold;
+    }
+  }
+
+  &-gap-left {
+    margin-left: 5px;
+  }
+
+  &-opaque {
+    color: $color-opaque;
+  }
+
+  &-flat-input {
+    border-width: 2px;
+    padding: 18px 10px;
+  }
+
+  &-flat-button {
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 600;
+
+    &__no-bg {
+      text-align: center;
+      padding: 6px 10px;
+      color: $color-text;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      background-color: $color-white !important;
+    }
+
+    &__fix-width {
+      min-width: 115px;
+    }
+
+    &__same-input {
+      color: $color-text;
+      border: 2px solid $color-grey-5;
+      text-align: center;
+      background-color: $color-white !important;
+
+      &:hover {
+        color: $color-white;
+        background-color: $color-primary !important;
+        border-color: $color-primary !important;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-border {
+    &-danger {
+      border: 1px solid $color-red-bulma !important;
+    }
+
+    &-info {
+      border: 1px solid $minimalist-primary !important;
+    }
+
+    &-primary {
+      border: 1px solid $flat-turquoise-6 !important;
+    }
+  }
+
+  &-button-danger {
+    background-color: $color-red-bulma;
+  }
+
+  &-button-primary {
+    background-color: $flat-turquoise-6;
+  }
+
+  &-button-info {
+    background-color: $minimalist-primary;
+  }
+}
+
+// END SMACSS

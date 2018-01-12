@@ -1,3 +1,4 @@
+require('dotenv').load()
 const express = require('express')
 const next = require('next')
 const http = require('http')
@@ -7,6 +8,7 @@ const bodyParser = require('body-parser')
 const logger = require('morgan')
 
 const dev = process.env.NODE_ENV !== 'production'
+
 const app = next({ dev })
 const morganMode = dev ? 'dev' : 'common'
 

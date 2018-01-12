@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 
 import LoginModal from 'components/LoginModal'
 import { authControlLoginModal } from 'actions'
-import style from './main.scss'
 
 class MainLayout extends Component {
   render() {
@@ -28,7 +27,6 @@ class MainLayout extends Component {
         <Layout.Footer style={{ textAlign: 'center' }}>
           React/Nextjs simple boilerplate ©2017 Created by vthang95
         </Layout.Footer>
-        <style dangerouslySetInnerHTML={{ __html: style }} />
       </Layout>
     )
   }

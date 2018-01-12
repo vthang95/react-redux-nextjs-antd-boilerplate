@@ -1,0 +1,236 @@
+.is-flex {
+  display: flex !important; }
+  .is-flex-1 {
+    flex: 1; }
+  .is-flex__space-between {
+    justify-content: space-between; }
+  .is-flex__center {
+    justify-content: center; }
+  .is-flex__start {
+    justify-content: flex-start; }
+
+.is-vertical-flex {
+  display: flex;
+  flex-direction: column; }
+
+.is-100-height {
+  height: 100%; }
+
+.is-fullwidth {
+  width: 100%; }
+
+.is-fullheight {
+  height: 100%; }
+
+.is-float-left {
+  float: left; }
+
+.is-float-right {
+  float: right; }
+
+.is-link__dark a {
+  color: #fff; }
+  .is-link__dark a:hover {
+    color: #D0ECE7;
+    text-decoration: none; }
+
+.is-link__light a {
+  color: rgba(0, 0, 0, 0.65); }
+  .is-link__light a:hover {
+    color: #09488a;
+    text-decoration: none; }
+
+.is-clickable {
+  cursor: pointer !important; }
+  .is-clickable__no-shadow:hover {
+    box-shadow: none !important; }
+  .is-clickable:hover {
+    box-shadow: 0 5px 10px #d7d7d7, 0 -5px 15px #d9d9d9; }
+
+.is-padding-25 {
+  padding: 25px; }
+
+.is-padding-20 {
+  padding: 20px; }
+
+.is-padding-15 {
+  padding: 15px; }
+
+.is-padding-10 {
+  padding: 10px; }
+
+.is-padding-5 {
+  padding: 5px; }
+
+.is-margin-25 {
+  margin: 25px; }
+
+.is-margin-20 {
+  margin: 20px; }
+
+.is-margin-15 {
+  margin: 15px; }
+
+.is-margin-10 {
+  margin: 10px; }
+
+.is-margin-5 {
+  margin: 5px; }
+
+.is-text-center {
+  text-align: center; }
+
+.is-text-sm {
+  font-size: 14px; }
+
+.is-text-md {
+  font-size: 18px; }
+
+.is-text-lg {
+  font-size: 24px; }
+
+.is-text-sg {
+  font-size: 28px; }
+
+.is-text-bold {
+  font-weight: bold; }
+
+.is-gap-left {
+  margin-left: 5px; }
+
+.is-opaque {
+  color: #919596; }
+
+.is-flat-input {
+  border-width: 2px;
+  padding: 18px 10px; }
+
+.is-flat-button {
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600; }
+  .is-flat-button__no-bg {
+    text-align: center;
+    padding: 6px 10px;
+    color: rgba(0, 0, 0, 0.65);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #fff !important; }
+  .is-flat-button__fix-width {
+    min-width: 115px; }
+  .is-flat-button__same-input {
+    color: rgba(0, 0, 0, 0.65);
+    border: 2px solid #d9d9d9;
+    text-align: center;
+    background-color: #fff !important; }
+    .is-flat-button__same-input:hover {
+      color: #fff;
+      background-color: #108ee9 !important;
+      border-color: #108ee9 !important;
+      font-weight: 600; }
+
+.is-border-danger {
+  border: 1px solid #ff3860 !important; }
+
+.is-border-info {
+  border: 1px solid #3EACA8 !important; }
+
+.is-border-primary {
+  border: 1px solid #1ABC9C !important; }
+
+.is-button-danger {
+  background-color: #ff3860; }
+
+.is-button-primary {
+  background-color: #1ABC9C; }
+
+.is-button-info {
+  background-color: #3EACA8; }
+
+body {
+  height: 100%;
+  font-size: 14px; }
+  body .ant-layout {
+    height: 100vh !important; }
+    body .ant-layout .ant-content {
+      background-color: #fff; }
+
+.input-search__huge {
+  height: 46px; }
+  .input-search__huge .ant-input-prefix {
+    padding: 5px;
+    font-size: 18px; }
+  .input-search__huge .ant-input {
+    padding-left: 40px !important;
+    border: none; }
+
+.input-normal {
+  height: 46px; }
+  .input-normal__strong {
+    font-size: 17px !important; }
+  .input-normal__semi-strong .ant-input-prefix {
+    font-size: 15px; }
+  .input-normal__semi-strong .ant-input {
+    font-size: 15px; }
+
+.input-default {
+  height: 34px;
+  border-radius: 2px; }
+
+.layout {
+  background-color: #fff; }
+  .layout .ant-layout-header {
+    background-color: #48C9B0; }
+    .layout .ant-layout-header .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff; }
+    .layout .ant-layout-header .account {
+      float: right;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600; }
+      .layout .ant-layout-header .account span {
+        color: #CB4335; }
+    .layout .ant-layout-header .account-login, .layout .ant-layout-header .account-signup {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px; }
+      .layout .ant-layout-header .account-login:hover, .layout .ant-layout-header .account-signup:hover {
+        color: #F1948A;
+        cursor: pointer; }
+
+.vertical-center-modal .login-form {
+  max-width: 350px; }
+
+.vertical-center-modal .login-form-forgot {
+  float: right; }
+
+.vertical-center-modal .login-form-button {
+  width: 100%; }
+
+body {
+  height: 100%;
+  font-size: 14px; }
+  body .ant-layout {
+    height: 100vh !important; }
+    body .ant-layout .ant-content {
+      background-color: #fff; }
+  body .hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    justify-content: center;
+    height: 500px; }
+    body .hero .hero-body {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: auto;
+      align-items: center; }

@@ -1,0 +1,33 @@
+.input-search__huge {
+  height: 46px;
+
+  .ant-input-prefix {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  .ant-input {
+    padding-left: 40px !important;
+    border: none;
+  }
+}
+
+.input-normal {
+  height: 46px;
+  &__strong {
+    font-size: 17px !important;
+  }
+  &__semi-strong {
+    .ant-input-prefix {
+      font-size: 15px;
+    }
+    .ant-input {
+      font-size: 15px;
+    }
+  }
+}
+
+.input-default {
+  height: 34px;
+  border-radius: 2px;
+}

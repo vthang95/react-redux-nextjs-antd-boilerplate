@@ -25,7 +25,7 @@ const bigdaddy = OurChildComponent => {
             <meta name="description" content="A boilerplate for server side rendering with react and nextjs" />
 
             <link href="/static/css/antd.min.2.13.9.css" rel="stylesheet" />
-            <link href="/static/dist/global.css" rel="stylesheet" />
+            <link href="/static/dist/main.css" rel="stylesheet" />
           </Head>
           <LocaleProvider locale={vi}>
             <MainLayout>

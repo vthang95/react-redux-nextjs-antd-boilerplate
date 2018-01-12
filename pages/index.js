@@ -3,7 +3,6 @@ import { Button } from 'antd'
 
 import Notification from 'components/Notification'
 import bigdaddy from 'hocs/bigdaddy'
-import style from './index.scss'
 import { authGetInfo } from 'actions'
 import connect from 'store'
 
@@ -36,7 +35,6 @@ class Index extends React.Component {
             </div>
           </div>
         </div>
-        <style dangerouslySetInnerHTML={{ __html: style }} />
       </div>
     )
   }

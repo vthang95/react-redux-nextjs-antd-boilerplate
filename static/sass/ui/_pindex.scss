@@ -1,0 +1,30 @@
+body {
+  height: 100%;
+  font-size: 14px;
+
+  .ant-layout {
+    height: 100vh !important;
+
+    .ant-content {
+      background-color: $color-white;
+    }
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    justify-content: center;
+    height: 500px;
+
+    .hero-body {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: auto;
+      align-items: center;
+    }
+  }
+
+}

@@ -1,6 +1,0 @@
-body {
-  height: 100%; }
-  body .ant-layout {
-    height: 100vh !important; }
-    body .ant-layout .ant-content {
-      background-color: #fff; }
