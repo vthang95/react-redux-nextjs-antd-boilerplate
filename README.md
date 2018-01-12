@@ -15,7 +15,7 @@ when you need to kick off your own project. This minimalist boilerplate will hel
 - With `yarn`
 
 ```
-git clone https://github.com/vthang95/react-next-antd-boilerplate.git
+git clone https://github.com/vthang95/react-redux-nextjs-antd-boilerplate.git
 yarn install
 yarn dev
 ```
@@ -23,7 +23,7 @@ yarn dev
 - With `npm`
 
 ```
-git clone https://github.com/vthang95/react-next-antd-boilerplate.git
+git clone https://github.com/vthang95/react-redux-nextjs-antd-boilerplate.git
 npm install
 npm run dev
 ```

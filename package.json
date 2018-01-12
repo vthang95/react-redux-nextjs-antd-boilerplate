@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-next-antd-boilerplate",
+  "name": "react-redux-nextjs-antd-boilerplate",
   "version": "1.0.0",
   "description": "A simple react + next example app. A boilerplate for server side rendering with React, Next.js and React UI library Ant Design",
   "main": "server.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vthang95/react-next-antd-boilerplate.git"
+    "url": "git+https://github.com/vthang95/react-redux-nextjs-antd-boilerplate.git"
   },
   "keywords": [
     "[\"react\"",
@@ -31,9 +31,9 @@
   "author": "vthang95",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vthang95/react-next-antd-boilerplate/issues"
+    "url": "https://github.com/vthang95/react-redux-nextjs-antd-boilerplate/issues"
   },
-  "homepage": "https://github.com/vthang95/react-next-antd-boilerplate#readme",
+  "homepage": "https://github.com/vthang95/react-redux-nextjs-antd-boilerplate#readme",
   "dependencies": {
     "antd": "^2.13.9",
     "axios": "^0.17.0",
