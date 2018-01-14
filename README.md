@@ -10,6 +10,29 @@ It use scss as a preprocessor with modern structure and it is compiled with node
 This project was created to make easier to get started without concern about configuration and structuring of you codebase
 when you need to kick off your own project. This minimalist boilerplate will help you and save your time
 
+# Server: Express, MongoDB, Mongoose
+
+This project use MongoDB to store data and use Express.js to handle logic.But it is not recommended. It is just examples to put some logics
+that make you understand how these things work. For bussiness server, You need to create another backend server seperately. Next.js is just used for rendering. Don't mix it.
+
+Backend structure:
+
+|--/src
+|----/api
+|------/users
+|--------/index.js
+|--------/user.controller.js
+|--------/user.dao.js
+|--------/user.schema.js
+|----/authentication.js
+|----/global-controller.js
+|----/server.js
+
+# UI library Ant.design
+
+When i found Antd, i just thought: "Oh my god! This tiny ant is really powerful!". Antd has modern design and rich components. The documentations is very clear with detailed functionality and examples. This is reason why i will choose ant for my next projects.
+You can check it out at: https://ant.design
+
 ## Development environment
 
 - With `yarn`

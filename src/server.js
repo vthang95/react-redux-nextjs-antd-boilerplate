@@ -14,7 +14,7 @@ const dev = process.env.NODE_ENV !== "production"
 
 const app = next({ dev })
 const morganMode = dev ? "dev" : "common"
-const mongodbURI = dev ? "mongodb://localhost:27017/boilerplate" : "mongodb://hoabinh2017:1qa2ws3ed4rf@ds123976.mlab.com:23976/hoabinhgov"
+const mongodbURI = dev ? "mongodb://localhost:27017/boilerplate" : "remoteURI"
 
 const controller = require("./global-controller")
 
