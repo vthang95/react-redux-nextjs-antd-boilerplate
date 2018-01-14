@@ -1,10 +1,10 @@
-import React from 'react'
-import { Button } from 'antd'
+import React from "react"
+import { Button } from "antd"
 
-import Notification from 'components/Notification'
-import bigdaddy from 'hocs/bigdaddy'
-import { authGetInfo } from 'actions'
-import connect from 'store'
+import Notification from "components/Notification"
+import bigdaddy from "hocs/bigdaddy"
+import { authGetInfo } from "actions"
+import connect from "store"
 
 class Index extends React.Component {
   static async getInitialProps(ctx) {
@@ -28,7 +28,7 @@ class Index extends React.Component {
               <Button
                 type="danger"
                 style={{ marginTop: 20 }}
-                onClick={() => Notification.success('Yay!', 'You clicked!')}
+                onClick={() => Notification.success("Yay!", "You clicked!")}
               >
                 Click Me!
               </Button>

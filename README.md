@@ -60,4 +60,4 @@ This boilerplate is not include test. Please feel free to contribute!
 
 ## Contributing
 
-I am not educated in computer science so it may contain many unreasonable problems. So, feel free to submit a PR or issues.
+I am not educated in computer science so it may contain many unreasonable problems. Feel free to submit a PR or issues.

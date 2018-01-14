@@ -1,15 +1,15 @@
-import { Component } from 'react'
-import Head from 'next/head'
-import vi from 'antd/lib/locale-provider/en_US';
-import { LocaleProvider } from 'antd'
+import { Component } from "react"
+import Head from "next/head"
+import vi from "antd/lib/locale-provider/en_US"
+import { LocaleProvider } from "antd"
 
-import MainLayout from 'layouts/main.layout'
+import MainLayout from "layouts/main.layout"
 
 const bigdaddy = OurChildComponent => {
   class HigherOrderComponent extends Component {
     static async getInitialProps(ctx) {
       // Do something in serverside here
-      const childProps = OurChildComponent.getInitialProps ? await OurChildComponent.getInitialProps(ctx) : {};
+      const childProps = OurChildComponent.getInitialProps ? await OurChildComponent.getInitialProps(ctx) : {}
 
       return { ...childProps }
     }

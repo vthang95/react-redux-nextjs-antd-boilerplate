@@ -1,16 +1,16 @@
-const path = require('path');
-const webpack = require('webpack');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const { ANALYZE } = process.env;
+const path = require("path")
+const webpack = require("webpack")
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")
+const { ANALYZE } = process.env
 // :TODO -lp use extract-text-webpack-plugin
 
 module.exports = {
   webpack: (config, {dev}) => {
     config.resolve = {
-      modules: ['pages', 'node_modules'],
+      modules: ["pages", "node_modules"],
       mainFields: [
-        'browser',
-        'main',
+        "browser",
+        "main",
       ],
       alias: {
       }
@@ -23,21 +23,21 @@ module.exports = {
       },
       {
         test: /\.(css|scss)/,
-        loader: 'emit-file-loader',
+        loader: "emit-file-loader",
         options: {
-          name: 'dist/[path][name].[ext]'
+          name: "dist/[path][name].[ext]"
         }
       },
       {
         test: /\.css$/,
-        use: ['babel-loader', 'raw-loader', 'postcss-loader']
+        use: ["babel-loader", "raw-loader", "postcss-loader"]
       },
       {
         test: /\.scss$/,
-        use: ['babel-loader', 'raw-loader', 'postcss-loader',
-          { loader: 'sass-loader',
+        use: ["babel-loader", "raw-loader", "postcss-loader",
+          { loader: "sass-loader",
             options: {
-              includePaths: ['styles', 'node_modules']
+              includePaths: ["styles", "node_modules"]
                 .map((d) => path.join(__dirname, d))
                 .reduce((a, c) => a.concat(c), [])
             }
@@ -46,45 +46,45 @@ module.exports = {
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$/i,
-        loader: 'url-loader?limit=10000',
+        loader: "url-loader?limit=10000",
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'emit-file-loader',
+        loader: "emit-file-loader",
         options: {
-          name: 'dist/[path][name].[ext]'
+          name: "dist/[path][name].[ext]"
         }
       }, {
         test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'emit-file-loader',
+        loader: "emit-file-loader",
         options: {
-          name: 'dist/[path][name].[ext]'
+          name: "dist/[path][name].[ext]"
         }
       }, {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'emit-file-loader',
+        loader: "emit-file-loader",
         options: {
-          name: 'dist/[path][name].[ext]'
+          name: "dist/[path][name].[ext]"
         }
       }, {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'emit-file-loader',
+        loader: "emit-file-loader",
         options: {
-          name: 'dist/[path][name].[ext]'
+          name: "dist/[path][name].[ext]"
         }
       }
-    );
+    )
 
     if (ANALYZE) {
       config.plugins.push(new BundleAnalyzerPlugin({
-        analyzerMode: 'server',
+        analyzerMode: "server",
         analyzerPort: 8888,
         openAnalyzer: true
       }))
     }
 
-    config.plugins.push(new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /vi|en|lo/));
+    config.plugins.push(new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /vi|en|lo/))
 
-    return config;
+    return config
   }
 }

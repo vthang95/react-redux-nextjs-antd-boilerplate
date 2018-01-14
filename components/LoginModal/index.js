@@ -1,8 +1,8 @@
-import { Component } from 'react'
-import { Modal, Input, Form, Button, Checkbox, Icon } from 'antd'
-import { connect } from 'react-redux'
+import { Component } from "react"
+import { Modal, Input, Form, Button, Checkbox, Icon } from "antd"
+import { connect } from "react-redux"
 
-import { authControlLoginModal, authLogin } from 'actions'
+import { authControlLoginModal, authLogin } from "actions"
 
 class LoginModal extends Component {
   render() {
@@ -37,22 +37,22 @@ const NormalLoginForm = (props) => {
   return (
     <Form onSubmit={handleSubmit} className="login-form">
       <Form.Item>
-        {getFieldDecorator('username', {
-          rules: [{ required: true, message: 'Please input your username!' }],
+        {getFieldDecorator("username", {
+          rules: [{ required: true, message: "Please input your username!" }],
         })(
           <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="Username" />
         )}
       </Form.Item>
       <Form.Item>
-        {getFieldDecorator('password', {
-          rules: [{ required: true, message: 'Please input your Password!' }],
+        {getFieldDecorator("password", {
+          rules: [{ required: true, message: "Please input your Password!" }],
         })(
           <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="Password" />
         )}
       </Form.Item>
       <Form.Item>
-        {getFieldDecorator('remember', {
-          valuePropName: 'checked',
+        {getFieldDecorator("remember", {
+          valuePropName: "checked",
           initialValue: true,
         })(
           <Checkbox>Remember me</Checkbox>
