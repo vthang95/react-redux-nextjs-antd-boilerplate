@@ -18,14 +18,23 @@ that make you understand how these things work. For bussiness server, You need t
 Backend structure:
 
 |--/src
+
 |----/api
+
 |------/users
+
 |--------/index.js
+
 |--------/user.controller.js
+
 |--------/user.dao.js
+
 |--------/user.schema.js
+
 |----/authentication.js
+
 |----/global-controller.js
+
 |----/server.js
 
 # UI library Ant.design
