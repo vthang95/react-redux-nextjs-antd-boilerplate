@@ -25,7 +25,7 @@ exports.postLogin = (req, res) => {
     ],
     (err, result) => {
       if (err) return res.json({ success: false, errors: err })
-      if (!result.isMatch) return res.json({ success: false, msg: "Sai mật khẩu", errors: { errMsg: "Email and Password do not match!" } })
+      if (!result.isMatch) return res.json({ success: false, msg: "Can not Login", errors: { errMsg: "Email and Password do not match!" } })
       let token = auth.signToken(result.doc)
       let user = {
         username: result.doc.username,

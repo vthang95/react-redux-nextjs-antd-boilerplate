@@ -81,7 +81,7 @@ const isAuthorized = roles => {
     let condition = _.some(roles, (role) => req.user.role === permission[role])
 
     if (condition) return next()
-    return res.json({ success: false, message: 'Không đủ quyền', error: null })
+    return res.json({ success: false, message: 'Permission denied', error: null })
   }
 }
 
@@ -95,7 +95,7 @@ const isAuthorizedServer = roles => {
   return (req, res, next) => {
     let condition = _.some(roles, (role) => req.userServer.role === permission[role])
     if (condition) return next()
-    return res.send('<h1>Không đủ quyền</h1>')
+    return res.send('<h1>Permission denied</h1>')
   }
 }
 

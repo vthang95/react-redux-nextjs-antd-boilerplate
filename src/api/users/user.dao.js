@@ -11,7 +11,7 @@ const asyncFindUser = (userInfo, callback) => {
 }
 
 const asyncCreateUser = (userCheck, callback) => {
-  if (userCheck.exist) return callback({ errMsg: 'Tài khoản đã tồn tại trên hệ thống' })
+  if (userCheck.exist) return callback({ errMsg: 'User is already exists' })
 
   const newUser = new UserModel(userCheck.userInfo)
 
@@ -22,7 +22,7 @@ const asyncCreateUser = (userCheck, callback) => {
 }
 
 const asyncVerifyAccount = (userCheck, callback) => {
-  if (!userCheck.exist) return callback({ errMsg: 'Tài khoản không tồn tại' })
+  if (!userCheck.exist) return callback({ errMsg: 'User is not exists' })
   userCheck.doc.comparePassword(userCheck.userInfo.password, userCheck.doc.password, (err, isMatch) => {
     if (err) return callback(err)
     return callback(null, { isMatch, doc: userCheck.doc })
