@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import { Component } from "react"
 import Head from "next/head"
 import vi from "antd/lib/locale-provider/en_US"
 import { LocaleProvider } from "antd"
