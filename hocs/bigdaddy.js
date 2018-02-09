@@ -1,4 +1,4 @@
-import { Component } from "react"
+import React, { Component } from "react"
 import Head from "next/head"
 import vi from "antd/lib/locale-provider/en_US"
 import { LocaleProvider } from "antd"
@@ -24,7 +24,7 @@ const bigdaddy = OurChildComponent => {
             <title>Simple Nextjs Boilerplate!</title>
             <meta name="description" content="A boilerplate for server side rendering with react and nextjs" />
 
-            <link href="/static/css/antd.min.2.13.9.css" rel="stylesheet" />
+            <link href="/static/css/antd.min.css" rel="stylesheet" />
             <link href="/static/dist/main.css" rel="stylesheet" />
           </Head>
           <LocaleProvider locale={vi}>

@@ -28,7 +28,7 @@ app.prepare()
     const server = express()
 
     mongoose.Promise = global.Promise
-    mongoose.connect(mongodbURI, { useMongoClient: true })
+    mongoose.connect(mongodbURI)
       .then(() => console.log(`%s Connected to ${dev ? "localDB" : "remoteDB"}`, chalk.green("✓")))
       .catch(err => {
         console.log(err)

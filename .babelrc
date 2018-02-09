@@ -22,8 +22,8 @@
     ]
   ],
   "presets": [
+    "next/babel",
     "react",
-    "./babel-preset",
     "stage-0"
   ],
   "ignore": []
