@@ -18,14 +18,23 @@ that make you understand how these things work. For bussiness server, You need t
 Backend structure:
 
 |--/src
+
 |----/api
+
 |------/users
+
 |--------/index.js
+
 |--------/user.controller.js
+
 |--------/user.dao.js
+
 |--------/user.schema.js
+
 |----/authentication.js
+
 |----/global-controller.js
+
 |----/server.js
 
 # UI library Ant.design
@@ -80,6 +89,10 @@ You can define you own environment variables in `.env`. To access them, use `pro
 ## Test
 
 This boilerplate is not include test. Please feel free to contribute!
+
+## Plans
+- [] Login/Signup page
+- [] Do some Antd components
 
 ## Contributing
 
