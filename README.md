@@ -42,6 +42,11 @@ Backend structure:
 When i found Antd, i just thought: "Oh my god! This tiny ant is really powerful!". Antd has modern design and rich components. The documentations is very clear with detailed functionality and examples. This is reason why i will choose ant for my next projects.
 You can check it out at: https://ant.design
 
+## Requires
+- Nodejs
+- Mongodb
+- node-sass
+
 ## Development environment
 
 - With `yarn`

@@ -2,7 +2,7 @@ import { Component } from "react"
 import { Layout, Menu } from "antd"
 import { connect } from "react-redux"
 
-import LoginModal from "components/LoginModal"
+import LoginModal from "src/auth/components/LoginModal"
 import { authControlLoginModal } from "actions"
 
 class MainLayout extends Component {
