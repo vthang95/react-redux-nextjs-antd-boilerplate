@@ -2,9 +2,12 @@ import React from "react"
 import { Button } from "antd"
 
 import Notification from "components/Notification"
-import bigdaddy from "hocs/bigdaddy"
+// import bigdaddy from "hocs/bigdaddy"
 import { authGetInfo } from "actions"
-import connect from "store"
+// import connect from "store"
+
+// BUG:
+import { pageWrapper } from "utils/wrapper"
 
 class Index extends React.Component {
   static async getInitialProps(ctx) {
@@ -46,4 +49,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { authGetInfo })(bigdaddy(Index))
+export default pageWrapper(mapStateToProps, { authGetInfo })(Index)
