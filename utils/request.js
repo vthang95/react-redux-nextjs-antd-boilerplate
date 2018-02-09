@@ -1,6 +1,6 @@
 import axios from "axios"
 
-exports.sendGet = (url, params, _token) => {
+const sendGet = (url, params, _token) => {
   let token
 
   if (!_token) token = localStorage.getItem("jwt")
@@ -19,7 +19,7 @@ exports.sendGet = (url, params, _token) => {
   });
 }
 
-exports.sendPost = (url, params, data, _token) => {
+const sendPost = (url, params, data, _token) => {
   let token
 
   if (!_token) token = localStorage.getItem("jwt")
@@ -39,7 +39,7 @@ exports.sendPost = (url, params, data, _token) => {
   });
 }
 
-exports.sendPut = (url, params, data, _token) => {
+const sendPut = (url, params, data, _token) => {
   let token
 
   if (!_token) token = localStorage.getItem("jwt")
@@ -59,7 +59,7 @@ exports.sendPut = (url, params, data, _token) => {
   });
 }
 
-exports.sendDelete = (url, params, _token) => {
+const sendDelete = (url, params, _token) => {
   let token
 
   if (!_token) token = localStorage.getItem("jwt")
@@ -76,4 +76,11 @@ exports.sendDelete = (url, params, _token) => {
     }))
       else return reject({ internal_error: "Access Token is missing!" })
   });
+}
+
+export {
+  sendGet,
+  sendPost,
+  sendPut,
+  sendDelete
 }
