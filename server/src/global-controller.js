@@ -1,15 +1,18 @@
 const next = require("next")
+const { parse } = require("url")
 
 const dev = process.env.NODE_ENV !== "production"
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
 exports.handleNormalRequest = (req, res) => {
+  const parsedUrl = parse(req.url, true)
+  const { pathname, query } = parsedUrl
   if (dev) {
     const handleDev = req.app.getRequestHandler()
-    return handleDev(req, res)
+    return handleDev(req, res, parsedUrl)
   }
-  return handle(req, res)
+  return handle(req, res, parsedUrl)
 }
 
 exports.handleNextRequest = (req, res) => {

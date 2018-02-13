@@ -5,7 +5,7 @@ const auth = require("../../authentication")
 const User = require("./user.dao")
 
 exports.getMe = (req, res) => {
-  res.json({ success: true, msg: "Ok!" })
+  return res.json({ success: true, msg: "Ok!" })
 }
 
 exports.postLogin = (req, res) => {

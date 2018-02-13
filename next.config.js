@@ -6,6 +6,15 @@ const { ANALYZE } = process.env
 
 module.exports = {
   webpack: (config, {dev}) => {
+    config.devtool = false
+
+    // disable soucemaps of babel-loader
+    for (const r of config.module.rules) {
+      if (r.loader === 'babel-loader') {
+        r.options.sourceMaps = false
+      }
+    }
+
     config.resolve = {
       modules: ["pages", "node_modules"],
       mainFields: [
