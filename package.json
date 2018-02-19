@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build": "next build && npm run build:scss",
-    "build:scss": "node-sass static/sass/main.scss static/dist/main.css",
-    "build-scss:watch": "node-sass -w static/sass/ -o static/dist/",
+    "build:scss": "node-sass styles/main.scss static/dist/main.css",
+    "build-scss:watch": "node-sass -w styles/ -o static/dist/",
     "dev": "cross-env NODE_ENV=devolopment SESSION_SECRET=reactnextboilerplate nodemon --watch ./server/src ./server/src/server.js & npm run build-scss:watch",
     "start": "cross-env NODE_ENV=production SESSION_SECRET=reactnextboilerplate node ./server/src/server.js",
     "analyze": "cross-env ANALYZE=1 next build",
