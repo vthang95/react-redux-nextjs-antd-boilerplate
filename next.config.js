@@ -92,6 +92,15 @@ module.exports = {
       }))
     }
 
+    if (process.env.NODE_ENV === "production") {
+      config.plugins.push(
+        new webpack.DefinePlugin({
+          'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+        new webpack.optimize.UglifyJsPlugin()
+      )
+    }
+
     config.plugins.push(new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /vi|en|lo/))
 
     return config
