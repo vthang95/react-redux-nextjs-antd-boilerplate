@@ -13,6 +13,14 @@ const mongoose = require("mongoose")
 const dev = process.env.NODE_ENV !== "production"
 
 const app = next({ dev })
+const handle = app.getRequestHandler()
+
+// Export for controllers
+module.exports = {
+  app,
+  handle
+}
+
 const morganMode = dev ? "dev" : "common"
 const mongodbURI = dev ? "mongodb://localhost:27017/boilerplate" : "remoteURI"
 
@@ -32,7 +40,7 @@ app.prepare()
       .then(() => console.log(`%s Connected to ${dev ? "localDB" : "remoteDB"}`, chalk.green("✓")))
       .catch(err => {
         console.log(err)
-        console.log("%s MongoDB connection error! Please make sure MongoDB is running", chalk.red("✗"))
+        console.log("%s MongoDB connection error! Please make sure that MongoDB is running", chalk.red("✗"))
       })
 
     server.set("port", process.env.PORT || 8090)
@@ -45,11 +53,6 @@ app.prepare()
 
     server.use('/api/users', userRouter)
 
-    server.use((req, res, next) => {
-      if (dev) req.app = app
-      next()
-    })
-
     server.get("*", controller.handleNormalRequest)
 
     server.listen(server.get("port"), (err) => {
@@ -61,3 +64,4 @@ app.prepare()
     console.log(ex.stack)
     process.exit(1)
   })
+
